@@ -30,6 +30,7 @@ const AddProductForm: React.FC = () => {
     })
       .then(() => {
         message.success('Product added successfully!');
+        refreshPage();
         setName('');
         setStock(0);
         setPrice(0);
@@ -83,3 +84,7 @@ const AddProductForm: React.FC = () => {
 };
 
 export default AddProductForm;
+function refreshPage() {
+  window.location.reload();
+}
+
